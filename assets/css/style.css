@@ -1,28 +1,23 @@
-*, *::before, *::after
- {
+*,
+*::before,
+*::after {
     font-family: 'Public Sans', sans-serif;
 }
 
 body {
-    --hue:var(--hue-neutral)
-    margin: 0;
+    background-color: orange;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:100vw;
-    height:100vh;
-    background-color: hsl(var(--hue), 100%, 20%)
-    
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+    background-image: url(../images/hero-image.jpg);
 }
 
-body.correct {
-            hue:var(--hue-correct)
-}
 
-body.wrong {
-    hue:var(hue-wrong)
-}
 
 .container {
     width: 800px;
@@ -51,14 +46,15 @@ body.wrong {
 }
 
 .btn.correct {
---hue:var(--hue-correct)
+    --hue: var(--hue-correct)
 }
 
 .btn.wrong {
-    --hue:var(--hue-wrong)
+    --hue: var(--hue-wrong)
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
