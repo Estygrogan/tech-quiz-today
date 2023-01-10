@@ -5,7 +5,7 @@ let shuffledQuestions, currentQuestionIndex
 let questionElement = document.getElementById("question")
 let answerButtonsElement = document.getElementById("answer-buttons")
 let nextButton = document.getElementById("next-btn")
-let score = 0;
+let score;
 
 startButton.addEventListener("click", startGame)
 nextButton.addEventListener("click", () => {

@@ -6,7 +6,6 @@
 
 /* Gives styling to majority of content*/
 body {
-    background-color: orange;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -74,4 +73,10 @@ body {
 /* Hides all html code with the hide class*/
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
 }
