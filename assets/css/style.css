@@ -4,6 +4,7 @@
     font-family: 'Public Sans', sans-serif;
 }
 
+/* Gives styling to majority of content*/
 body {
     background-color: orange;
     padding: 0;
@@ -18,7 +19,7 @@ body {
 }
 
 
-
+/* Gives styling to box containing quiz elements*/
 .container {
     width: 800px;
     max-width: 80%;
@@ -28,6 +29,7 @@ body {
     box-shadow: 0 0 10px 2px;
 }
 
+/* Gives answer buttons styling and layout*/
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -35,16 +37,18 @@ body {
     margin: 30px 0;
 }
 
+/* Spaces out and gives padding to all buttons*/
 .btn {
     border-radius: 5px;
     padding: 5px 10px;
-    color: blue;
 }
 
+/* Gives hover effect to buttons*/
 .btn:hover {
     border-color: black;
 }
 
+/* Should make button turn green if answer is correct, however cannot seem to get this to work.*/
 .btn.correct {
     --hue: var(--hue-correct)
 }
@@ -60,12 +64,14 @@ body {
     padding: 10px 20px;
 }
 
+/* Styles start and next buttons*/
 .controls {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Hides all html code with the hide class*/
 .hide {
     display: none;
 }
