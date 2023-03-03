@@ -1,83 +1,86 @@
 //Declared variables
-let startButton = document.getElementById("start-btn")
-let questContainerElement = document.getElementById("question-container")
-let shuffledQuestions, currentQuestionIndex
-let questionElement = document.getElementById("question")
-let answerButtonsElement = document.getElementById("answer-buttons")
-let nextButton = document.getElementById("next-btn")
-let score;
+let startButton = document.getElementById("start-btn");
+let questContainerElement = document.getElementById("question-container");
+let shuffledQuestions, currentQuestionIndex;
+let questionElement = document.getElementById("question");
+let answerButtonsElement = document.getElementById("answer-buttons");
+let nextButton = document.getElementById("next-btn");
+let score = 0;
 
-startButton.addEventListener("click", startGame)
+startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
+    currentQuestionIndex++;
+    setNextQuestion();
+});
 //* Function to start the game and randomise order of questions
 function startGame() {
-    console.log("started")
-    startButton.classList.add("hide")
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    questContainerElement.classList.remove("hide")
-    setNextQuestion()
+    console.log("started");
+    startButton.classList.add("hide");
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    questContainerElement.classList.remove("hide");
+    setNextQuestion();
 }
 
 function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 // From Web Dev Simplified tutorial video
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        let button = document.createElement("button")
-        button.innerText = answer.text
-        button.classList.add('btn')
+        let button = document.createElement("button");
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
+            score++
         }
-        button.addEventListener("click", selectAnswer)
-        answerButtonsElement.appendChild(button)
-    })
+        button.addEventListener("click", selectAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 
 }
 // From Web Dev Simplified tutorial video
 function selectAnswer(e) {
-    let selectedButton = e.target
-    let correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
+    let selectedButton = e.target;
+    let correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove("hide")
+        nextButton.classList.remove("hide");
     } else {
-        startButton.innerText = "Restart"
-        startButton.classList.remove("hide")
+        startButton.innerText = "Restart";
+        startButton.classList.remove("hide");
     }
 
 }
 // From Web Dev Simplified tutorial video
 function resetState() {
-    nextButton.classList.add("hide")
+    nextButton.classList.add("hide");
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add("correct")
+        element.classList.add("correct");
     } else {
-        element.classList.add("wrong")
+        element.classList.add("wrong");
     }
 }
 
 function clearStatusClass(element) {
-    element.classList.remove("correct")
-    element.classList.remove("wrong")
+    element.classList.remove("correct");
+    element.classList.remove("wrong");
 }
+
+
 
 // List of quiz questions
 let questions = [{
@@ -290,4 +293,4 @@ let questions = [{
         ]
 
     },
-]
+];
