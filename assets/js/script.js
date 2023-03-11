@@ -9,11 +9,18 @@ let formButton = document.getElementById("form-button")
 let nameForm = document.getElementById("form-container")
 let score = 0;
 
-startButton.addEventListener("click", startGame);
+startButton.addEventListener("click", openForm);
+formButton.addEventListener("click", startGame)
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
+
+function openForm() {
+    startButton.classList.add("hide");
+    nameForm.classList.remove("hide")
+    console.log("Enter name")
+}
 //* Function to start the game and randomise order of questions
 function startGame() {
     console.log("started");
@@ -81,8 +88,10 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 }
-
-
+/*
+nameForm.addEventListener("submit") {
+    e.preventDefault()
+}*/
 
 // List of quiz questions
 let questions = [{
