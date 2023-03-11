@@ -29,6 +29,7 @@ function startGame() {
     currentQuestionIndex = 0;
     questContainerElement.classList.remove("hide");
     setNextQuestion();
+    nameForm.classList.add("hide")
 }
 
 function setNextQuestion() {
