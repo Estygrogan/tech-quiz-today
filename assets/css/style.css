@@ -49,11 +49,11 @@ body {
 
 /* Should make button turn green if answer is correct, however cannot seem to get this to work.*/
 .btn.correct {
-    --hue: var(--hue-correct)
+    background-color: green;
 }
 
 .btn.wrong {
-    --hue: var(--hue-wrong)
+    background-color: red;
 }
 
 .start-btn,
