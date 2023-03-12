@@ -1,10 +1,12 @@
 # Tech Quiz Today
 
-Tech Quiz Today is a website, designed to interest and challenge tech enthusiasts
+Tech Quiz Today is a website, designed to interest and challenge tech enthusiasts. Tech is an area I am passionatea bout, and making this quiz helped me learn some fun facts about the industry. I hope this quiz can educate users in the same way.
 
 ## Features
 
 Quiz: A fully functioning quiz with 10 questions is included. Questions are randomised, ensuring that each site user ahs a unique experience.
+
+Responsiveness: When selecting an answer, the quiz tells you if you are right or wrong, depending on the colour the answer buttons change to. If correct, the answer button changes to green, if incorrect, red. When all questions are answered, the quiz allows you to restart.
 
 Future Plans: Proper implementation of scoring and username features.
 
@@ -16,7 +18,7 @@ Extensive testing was conducted, with many bugs being resolved. Early on, there 
 
 ## Unfixed Bugs
 
-The answer buttons are supposed to change to either green or red, depending if the answer is right or wrong. For whatever reason, the style will not apply to the buttons. Even after significant troubleshooting, I was unable to resolve this issue. An attempt to tell users they had the right answer through alerts was also unsuccessful. Hero Image is also very enlarged, unfortunately did not have time to resolve this.
+Main unfixed bug is implementation of scoring system, stil not tracking as I had intended.
 
 ## Deployment
 
