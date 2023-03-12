@@ -7,7 +7,7 @@ let answerButtonsElement = document.getElementById("answer-buttons");
 let nextButton = document.getElementById("next-btn");
 let formButton = document.getElementById("form-button")
 let nameForm = document.getElementById("form-container")
-let score = 0;
+let scoreBoard = document.getElementById("score-container")
 
 startButton.addEventListener("click", openForm);
 formButton.addEventListener("click", startGame)
@@ -89,10 +89,9 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 }
-/*
-nameForm.addEventListener("submit") {
-    e.preventDefault()
-}*/
+
+
+
 
 // List of quiz questions
 let questions = [{
