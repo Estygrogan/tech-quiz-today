@@ -9,6 +9,7 @@ let formButton = document.getElementById("form-button");
 let nameForm = document.getElementById("form-container");
 let scoreBoard = document.getElementById("score-container");
 let score = 0;
+let playerName = "";
 
 startButton.addEventListener("click", openForm);
 formButton.addEventListener("click", startGame)
@@ -21,7 +22,6 @@ function openForm() {
     startButton.classList.add("hide");
     nameForm.classList.remove("hide")
     scoreBoard.classList.add("hide")
-    console.log("Enter name")
 }
 //* Function to start the game and randomise order of questions
 function startGame() {
@@ -32,6 +32,7 @@ function startGame() {
     questContainerElement.classList.remove("hide");
     setNextQuestion();
     nameForm.classList.add("hide")
+    scoreBoard.classList.remove("hide")
 }
 
 function setNextQuestion() {
