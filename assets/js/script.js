@@ -20,9 +20,10 @@ nextButton.addEventListener("click", () => {
 
 function openForm() {
     startButton.classList.add("hide");
-    nameForm.classList.remove("hide")
-    scoreBoard.classList.add("hide")
+    nameForm.classList.remove("hide");
+    scoreBoard.classList.add("hide");
 }
+
 //* Function to start the game and randomise order of questions
 function startGame() {
     console.log("started");
@@ -45,7 +46,7 @@ function showQuestion(question) {
     question.answers.forEach(answer => {
         let button = document.createElement("button");
         button.innerText = answer.text;
-        button.classList.add('btn');
+        button.classList.add("btn");
         if (answer.correct) {
             button.dataset.correct = answer.correct;
             score++
