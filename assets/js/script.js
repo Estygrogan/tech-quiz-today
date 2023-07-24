@@ -12,7 +12,7 @@ let score = 0;
 let playerName = "";
 
 startButton.addEventListener("click", openForm);
-formButton.addEventListener("click", startGame)
+formButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     setNextQuestion();
@@ -32,8 +32,8 @@ function startGame() {
     currentQuestionIndex = 0;
     questContainerElement.classList.remove("hide");
     setNextQuestion();
-    nameForm.classList.add("hide")
-    scoreBoard.classList.remove("hide")
+    nameForm.classList.add("hide");
+    scoreBoard.classList.remove("hide");
 }
 
 function setNextQuestion() {
