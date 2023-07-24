@@ -5,6 +5,7 @@ let shuffledQuestions, currentQuestionIndex;
 let questionElement = document.getElementById("question");
 let answerButtonsElement = document.getElementById("answer-buttons");
 let nextButton = document.getElementById("next-btn");
+let infoButton = document.getElementById("info-btn")
 let formButton = document.getElementById("form-button");
 let nameForm = document.getElementById("form-container");
 let scoreBoard = document.getElementById("score-container");
@@ -20,6 +21,7 @@ nextButton.addEventListener("click", () => {
 
 function openForm() {
     startButton.classList.add("hide");
+    infoButton.classList.add("hide");
     nameForm.classList.remove("hide");
     scoreBoard.classList.add("hide");
 }
