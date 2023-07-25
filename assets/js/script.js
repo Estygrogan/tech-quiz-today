@@ -5,12 +5,15 @@ let shuffledQuestions, currentQuestionIndex;
 let questionElement = document.getElementById("question");
 let answerButtonsElement = document.getElementById("answer-buttons");
 let nextButton = document.getElementById("next-btn");
-let infoButton = document.getElementById("info-btn")
+let openInfo = document.getElementById("info-btn")
+let closeInfo = document.getElementById("close-info")
+let quizInfo = document.getElementById("quiz-info")
 let formButton = document.getElementById("form-button");
 let nameForm = document.getElementById("form-container");
 let scoreBoard = document.getElementById("score-container");
 let score = 0;
 let playerName = "";
+
 
 startButton.addEventListener("click", openForm);
 formButton.addEventListener("click", startGame);
@@ -19,12 +22,27 @@ nextButton.addEventListener("click", () => {
     setNextQuestion();
 });
 
+
+/*
+openInfo.addEventListener("click", () => {
+    quizInfo.showModal();
+})
+*/
+
 function openForm() {
     startButton.classList.add("hide");
-    infoButton.classList.add("hide");
+    openInfo.classList.add("hide");
     nameForm.classList.remove("hide");
     scoreBoard.classList.add("hide");
 }
+
+function handleSubmit() {
+    nameForm.preventDefault();
+    let username = document.getElementById("name").value
+    localStorage.setItem("username", username)
+}
+
+nameForm.addEventListener("submit", handleSubmit());
 
 //* Function to start the game and randomise order of questions
 function startGame() {
@@ -95,8 +113,6 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 }
-
-
 
 
 // List of quiz questions
