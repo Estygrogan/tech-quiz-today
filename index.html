@@ -35,10 +35,10 @@
     <div id="form-container" class="container hide">
 
         <div class="enter-name">
-            <form action="https://formdump.codeinstitute.net" method="post">
+            <form action="#" method="post">
                 <label for="name">Enter your name:</label>
                 <input type="text" id="name" placeholder="Full Name" minlength="2" maxlength="20" required>
-                <button type="submit" id="form-button" class="btn">Let's Begin!</button>
+                <button id="form-button" class="btn">Let's Begin!</button>
             </form>
         </div>
 
@@ -57,13 +57,21 @@
         </table>
     </div>
 
-    <div id="score=table" class="container">
+    <div id="score-table" class="container">
         <tr>
             <th>Name</th>
             <td>Player Name</td>
             <th>Score</th>
             <td>0/10</td>
         </tr>
+    </div>
+
+    <div id="quiz-info" class="container">
+        <p>
+            1. Hit the Start Button and enter your username.
+            2. Answer the 10 questions and see how well you do!
+        </p>
+        <button id="close-info" class="btn">Back</button>
     </div>
 
     <script src="assets/js/script.js"></script>
