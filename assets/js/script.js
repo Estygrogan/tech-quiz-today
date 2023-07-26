@@ -13,6 +13,7 @@ let nameForm = document.getElementById("form-container");
 let formSubmit = document.getElementById("form-submit");
 let scoreBoard = document.getElementById("score-container");
 let score = 0;
+let liveScore = document.getElementById("live-score");
 let playerName = "";
 
 
@@ -33,7 +34,14 @@ function showInfo() {
     questContainerElement.classList.add("hide")
 }
 
+function hideInfo() {
+    quizInfo.classList.add("hide");
+    startButton.classList.remove("hide");
+    openInfo.classList.remove("hide");
+}
+
 openInfo.addEventListener("click", showInfo);
+closeInfo.addEventListener("click", hideInfo);
 
 function openForm() {
     startButton.classList.add("hide");
