@@ -1,14 +1,14 @@
 //Declared variables
-import questions from "./questions.js"
+import questions from "./questions.js";
 let startButton = document.getElementById("start-btn");
 let questContainerElement = document.getElementById("question-container");
 let shuffledQuestions, currentQuestionIndex;
 let questionElement = document.getElementById("question");
 let answerButtonsElement = document.getElementById("answer-buttons");
 let nextButton = document.getElementById("next-btn");
-let openInfo = document.getElementById("info-btn")
-let closeInfo = document.getElementById("close-info")
-let quizInfo = document.getElementById("quiz-info")
+let openInfo = document.getElementById("info-btn");
+let closeInfo = document.getElementById("close-info");
+let quizInfo = document.getElementById("quiz-info");
 let nameForm = document.getElementById("form-container");
 let formSubmit = document.getElementById("form-submit");
 let scoreBoard = document.getElementById("score-container");
@@ -21,8 +21,9 @@ startButton.addEventListener("click", openForm);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     setNextQuestion();
+    document.getElementById("live-score").innerHTML = score;
 });
-li
+
 
 
 function showInfo() {
@@ -31,7 +32,7 @@ function showInfo() {
     nameForm.classList.add("hide");
     scoreBoard.classList.add("hide");
     openInfo.classList.add("hide");
-    questContainerElement.classList.add("hide")
+    questContainerElement.classList.add("hide");
 }
 
 function hideInfo() {
@@ -53,16 +54,15 @@ function openForm() {
 
 function handleSubmit(event) {
     event.preventDefault();
-    let username = document.getElementById("name").value
+    let username = document.getElementById("name").value;
     document.getElementById("username-fill").innerHTML = username;
-    startGame()
+    startGame();
 }
 
 formSubmit.addEventListener("submit", handleSubmit);
 
 //* Function to start the game and randomise order of questions
 function startGame() {
-    console.log("started");
     startButton.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
@@ -85,8 +85,7 @@ function showQuestion(question) {
         button.classList.add("btn");
         if (answer.correct) {
             button.dataset.correct = answer.correct;
-            score++
-            console.log(score)
+            score++;
         }
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
