@@ -13,7 +13,7 @@ let nameForm = document.getElementById("form-container");
 let formSubmit = document.getElementById("form-submit");
 let scoreBoard = document.getElementById("score-container");
 let score = 0;
-let liveScore = document.getElementById("live-score");
+let liveScore = `<td id="live-score">${score}/10</td>`;
 let playerName = "";
 
 
@@ -22,7 +22,7 @@ nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
-
+li
 
 
 function showInfo() {
@@ -86,6 +86,7 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
             score++
+            console.log(score)
         }
         button.addEventListener("click", selectAnswer);
         answerButtonsElement.appendChild(button);
