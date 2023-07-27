@@ -8,13 +8,19 @@ Quiz: A fully functioning quiz with 10 questions is included. Questions are rand
 
 Responsiveness: When selecting an answer, the quiz tells you if you are right or wrong, depending on the colour the answer buttons change to. If correct, the answer button changes to green, if incorrect, red. When all questions are answered, the quiz allows you to restart.
 
-Future Plans: Proper implementation of scoring and username features.
+Username: Before starting the game, the user must enter a username. The form is validated, with a maximum and minimum number of characters required, and all must be text. User is unable to proceed until form is completed. The username is then displayed as the user completes the quiz.
+
+How to Play: Before starting the game, the user now has the option of seeing the game rules before beginning.
+
+
+
+## Validation
+HTML:[W3 Official Validator](https://validator.w3.org/nu/) 
+CSS: [W3S Validation Service](https://validator.w3.org/).
+Javascript: [JSHint](https://jshint.com/)
 
 ## Testing
-
-Code was validated through the [W3 Official Validator](https://validator.w3.org/nu/) for HTML, and the [W3S Validation Service](https://validator.w3.org/) for CSS.
-
-Extensive testing was conducted, with many bugs being resolved. Early on, there were syntax errors in the javascript, preventing the quiz functionality. This led to extensive troubleshooting, with some issues delaying development due to their prominence. Specifically, a certain function, necessary for displaying the question failed to fire until a small grammatical error was fixed.
+Extensive testing was conducted, with many bugs being resolved. Early on, there were syntax errors in the javascript, preventing the quiz functionality. This led to extensive troubleshooting, with some issues delaying development due to their prominence. Specifically, a certain function, necessary for displaying the question failed to fire until a small grammatical error was fixed. Quiz was tested on a wide variety of devices and screen sizes, as well as 3 browsers, Google Chrome, Microsoft Edg and Mozilla Firefox. I was also able to fix the form functionality through extensive testing.
 
 ## Unfixed Bugs
 
@@ -22,12 +28,11 @@ Main unfixed bug is implementation of scoring system, stil not tracking as I had
 
 ## Deployment
 
-After I was satisfied with my work in Gitpod, I then pushed my work to Github. The website was then deployed via Github.
+After I was satisfied with my work in Gitpod, I then pushed my work to Github. I then created the main branch of the project using Github Pages. This created the live site, needed to meet assessment criteria and would be the final version of the submission. 
 
 ## Credits
 
-Content: [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=WL&index=84) was an invaluable resource throughout the project. Initially, when beginning the javascript portion of this project, I was slightly lost. I watched a few of their tutorials, which helped greatly expand my knowledge from the course. Several sections of javascript were based on the video tutorial linked as well, and were adapted for this project. Specifically, several functions (labelled), as well as the basis for my styling.  Font was chosen from [Google Fonts](https://fonts.google.com/)
-
+Content: [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&list=WL&index=84) was an invaluable resource at the beginning of the project, used as an initiL baseline. From there I added several additional features and customised the code where required so it would work in the project. 
 Media: Hero image was pulled from [Pexels](https://www.pexels.com/). 
 
 Extra Help: Some general questions of mine for the project were answered in the Slack channels. Also benefitted from some advice from my mentor.
