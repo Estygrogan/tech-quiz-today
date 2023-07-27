@@ -35,11 +35,11 @@
     <div id="form-container" class="container hide">
 
         <div class="enter-name">
-            <!--form action="" method="post"-->
-            <label for="name">Enter your name:</label>
-            <input type="text" id="name" placeholder="Full Name" minlength="2" maxlength="20" required>
-            <button id="form-button" class="btn">Let's Begin!</button>
-            <!--/form-->
+            <form id="form-submit" action="" method="post">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" placeholder="Full Name" minlength="2" maxlength="20" required>
+                <button id="form-button" class="btn">Let's Begin!</button>
+            </form>
         </div>
 
 
@@ -52,7 +52,7 @@
                 <th>Name</th>
                 <td id="username-fill">Player Name</td>
                 <th>Score</th>
-                <td>0/10</td>
+                <td id="live-score">0/10</td>
             </tr>
         </table>
     </div>
@@ -68,7 +68,7 @@
         <button id="close-info" class="btn">Back</button>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" type="module"></script>
 </body>
 
 </html>
