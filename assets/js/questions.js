@@ -65,7 +65,7 @@ const questions = [{
         question: "What is the best selling games console of all time?",
         answers: [{
                 text: "Game Boy",
-                correct: true
+                correct: false
             },
             {
                 text: "Nintendo Switch",
